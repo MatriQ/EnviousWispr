@@ -1969,7 +1969,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "带有光和水平仪的紧凑型药丸。"
+            "value" : "带有光和水平仪的紧凑型浮动条。"
           }
         }
       }
@@ -2087,7 +2087,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "一个带有彩虹标记和计时器的小胶囊。 药丸EnviousWispr一直显示。"
+            "value" : "一个带有彩虹标记和计时器的小胶囊。 浮动条EnviousWispr一直显示。"
           }
         }
       }
@@ -5313,7 +5313,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自动检测语言"
+            "value" : "自动识别语言"
           }
         }
       }
@@ -5398,7 +5398,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "沉默时自动停止"
+            "value" : "静音时自动停止"
           }
         }
       }
@@ -5415,7 +5415,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "沉默时自动停止现在不可用"
+            "value" : "目前无法使用静音自动停止"
           }
         }
       }
@@ -5432,7 +5432,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "静音时自动停止：打开"
+            "value" : "静音自动停止：已开启"
           }
         }
       }
@@ -5449,7 +5449,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自动停止：活动（%@无声）"
+            "value" : "自动停止：已启用（静音 %@）"
           }
         }
       }
@@ -5687,7 +5687,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "最适合其他语言或最难听的音频。"
+            "value" : "最适合中文等其他语言，或较难识别的音频。"
           }
         }
       }
@@ -6550,7 +6550,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "更改适用于下一个录音"
+            "value" : "更改将在下次录音时生效"
           }
         }
       }
@@ -6889,7 +6889,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "钟声"
+            "value" : "提示音"
           }
         }
       }
@@ -6956,7 +6956,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "为录音药丸选择顶部或底部。"
+            "value" : "选择在屏幕顶部或底部显示录音浮动条。"
           }
         }
       }
@@ -7686,7 +7686,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "写字夹板"
+            "value" : "剪贴板"
           }
         }
       }
@@ -7770,7 +7770,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "云"
+            "value" : "云端"
           }
         }
       }
@@ -9292,7 +9292,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "检测您说的语言。99多种语言。"
+            "value" : "自动识别您使用的语言，支持 99 种以上语言。"
           }
         }
       }
@@ -9544,7 +9544,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "语音输入仍然有效。 没有密钥，文本在没有AI 润色的情况下粘贴。"
+            "value" : "语音输入仍然有效。 未配置 API Key 时，语音转写仍然可用，文字将直接粘贴。"
           }
         }
       }
@@ -9561,7 +9561,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "口酒"
+            "value" : "语音输入记录"
           }
         }
       }
@@ -9661,7 +9661,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "对...不予考虑"
+            "value" : "关闭"
           }
         }
       }
@@ -10542,7 +10542,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "停止说话后结束录音。"
+            "value" : "停止说话后自动结束录音。"
           }
         }
       }
@@ -11469,7 +11469,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "更快的转录"
+            "value" : "加速识别"
           }
         }
       }
@@ -11486,7 +11486,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "更快的转录需要选择一种语言。 通过自动检测，EnviousWispr使用干净的批次转录来提高准确性。"
+            "value" : "加速识别需要先指定语言。开启自动识别语言时，EnviousWispr 会在录音结束后统一转写，以保证准确性。"
           }
         }
       }
@@ -12003,7 +12003,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "对于其他语言或最难听的音频"
+            "value" : "适用于中文等其他语言，或较难识别的音频"
           }
         }
       }
@@ -12190,7 +12190,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "当你不语音输入时释放内存。"
+            "value" : "未使用语音输入时释放内存。"
           }
         }
       }
@@ -12476,7 +12476,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在platform.openai.com上获取您的免费API密钥"
+            "value" : "前往 platform.openai.com 获取 API Key"
           }
         }
       }
@@ -12881,7 +12881,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在不改变你的选择的情况下听这个钟声。"
+            "value" : "在不改变你的选择的情况下听这个提示音。"
           }
         }
       }
@@ -13048,7 +13048,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "持有%@"
+            "value" : "按住 %@"
           }
         }
       }
@@ -13065,7 +13065,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "按住%@并说点什么。\n\n完成后放手。"
+            "value" : "按住 %@ 开始说话。\n说完后松开按键。"
           }
         }
       }
@@ -14322,7 +14322,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "需要钥匙"
+            "value" : "需要 API Key"
           }
         }
       }
@@ -16801,7 +16801,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "需要一把钥匙"
+            "value" : "需要 API Key"
           }
         }
       }
@@ -18885,7 +18885,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在这台Mac上"
+            "value" : "本机"
           }
         }
       }
@@ -19021,7 +19021,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "打开“快速转录”时，屏幕预览会暂停。"
+            "value" : "开启加速识别时，屏幕实时预览会暂停。"
           }
         }
       }
@@ -19537,7 +19537,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "过程"
+            "value" : "处理"
           }
         }
       }
@@ -20008,7 +20008,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在快速转录打开时暂停"
+            "value" : "开启加速识别时暂停"
           }
         }
       }
@@ -20211,7 +20211,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "播放录音钟声"
+            "value" : "播放录音提示音"
           }
         }
       }
@@ -20228,7 +20228,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "录音开始和停止时会播放短钟声。"
+            "value" : "录音开始和停止时会播放短提示音。"
           }
         }
       }
@@ -20914,7 +20914,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在粘贴之前，将剪贴板上的内容放回去。"
+            "value" : "粘贴后恢复原来的剪贴板内容。"
           }
         }
       }
@@ -20997,7 +20997,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "最高纪录"
+            "value" : "录音"
           }
         }
       }
@@ -21014,7 +21014,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "录制的钟声"
+            "value" : "录制的提示音"
           }
         }
       }
@@ -21362,7 +21362,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "准备好转录"
+            "value" : "准备就绪"
           }
         }
       }
@@ -21378,7 +21378,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "准备好Wispr了！"
+            "value" : "准备开始语音输入！"
           }
         }
       }
@@ -21395,7 +21395,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "准备好在说话时展示你的话。"
+            "value" : "准备就绪，可在您说话时实时显示文字。"
           }
         }
       }
@@ -21496,7 +21496,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "最高纪录"
+            "value" : "录音"
           }
         }
       }
@@ -21530,7 +21530,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "记录药丸"
+            "value" : "录音浮动条"
           }
         }
       }
@@ -21831,7 +21831,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "刷新可用型号"
+            "value" : "刷新可用模型"
           }
         }
       }
@@ -21964,7 +21964,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "删除口水词（嗯，呃，嗯......）"
+            "value" : "去除口水词（嗯、呃、啊等）"
           }
         }
       }
@@ -22884,7 +22884,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在粘贴语音输入之前，保存并恢复剪贴板上的任何内在内。"
+            "value" : "保存粘贴语音输入之前的剪贴板内容，并在粘贴后恢复。"
           }
         }
       }
@@ -22968,7 +22968,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "说“<短语>表情符号”来获取字形。 光著话永远不会转换。"
+            "value" : "说出“<表情名称> emoji”可插入表情符号。单独说出名称不会自动转换。"
           }
         }
       }
@@ -22985,7 +22985,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "说一个短语后跟表情符号来获取其符号。"
+            "value" : "说出表情名称，再加上 emoji，即可插入对应表情符号。"
           }
         }
       }
@@ -23002,7 +23002,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "说逗号或新段落来插入它。"
+            "value" : "说出逗号或新段落等指令，即可插入对应的标点或换行。"
           }
         }
       }
@@ -23499,7 +23499,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "精选的"
+            "value" : "已选择"
           }
         }
       }
@@ -24831,7 +24831,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "口语标点符号"
+            "value" : "口述标点"
           }
         }
       }
@@ -25239,7 +25239,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "停止在沉默中录音"
+            "value" : "静音时自动停止录音"
           }
         }
       }
@@ -25273,7 +25273,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "当沉默达到您选择的暂停持续时间时停止录制。"
+            "value" : "静音持续达到设定时长后，自动停止录音。"
           }
         }
       }
@@ -25305,7 +25305,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "从转录中剥离常见的口水词。"
+            "value" : "去除转写文本中常见的口水词。"
           }
         }
       }
@@ -25726,7 +25726,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "文本复制到剪贴板"
+            "value" : "文本已复制到剪贴板"
           }
         }
       }
@@ -30271,7 +30271,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我们听到了。 盒子没有被选中，所以你的话被剪贴板了。\n\n单击框内，然后再次按住 %@。"
+            "value" : "语音已识别。由于未选中输入框，文字已复制到剪贴板。\n请先点击输入框，再次按住 %@。"
           }
         }
       }
@@ -30430,7 +30430,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "更快的转录改变了什么"
+            "value" : "加速识别带来的变化"
           }
         }
       }
@@ -30464,7 +30464,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在你录制时，漂浮的药丸显示的内容。"
+            "value" : "在你录制时，漂浮的浮动条显示的内容。"
           }
         }
       }
@@ -30612,7 +30612,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "当你口述时，药片漂浮的地方。"
+            "value" : "当你口述时，浮动条漂浮的地方。"
           }
         }
       }
@@ -30998,7 +30998,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在用所选语言录制时工作。"
+            "value" : "选择识别语言后，可在录音过程中进行识别。"
           }
         }
       }
@@ -31627,7 +31627,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你的语音输入保持全速。 关闭“快速转录”以查看预览。"
+            "value" : "语音输入仍正常运行。关闭加速识别后即可查看实时预览。"
           }
         }
       }
@@ -37825,7 +37825,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "记录药丸纪念减少运动"
+            "value" : "录音浮动条纪念减少运动"
           }
         }
       }
@@ -37849,7 +37849,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在 macOS 中打开“减少运动”后，录制药丸不再呼吸、闪烁或脉动。 颜色保持不变，所以警告仍然被解读为警告，嘴唇仍然随着你的声音而移动。"
+            "value" : "在 macOS 中打开“减少运动”后，录制浮动条不再呼吸、闪烁或脉动。 颜色保持不变，所以警告仍然被解读为警告，嘴唇仍然随着你的声音而移动。"
           }
         }
       }
@@ -38761,7 +38761,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "用于记录的新药丸设计"
+            "value" : "用于记录的新浮动条设计"
           }
         }
       }
@@ -38785,7 +38785,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我们现在为记录添加了新的药丸设计，您可以在外观部分在这些选项之间切换。"
+            "value" : "我们现在为记录添加了新的浮动条设计，您可以在外观部分在这些选项之间切换。"
           }
         }
       }
@@ -39217,7 +39217,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "按下取消快捷键，用于立即丢弃您的录音。 打开“逃生恢复”，您的语音输入将被保留。 该应用程序完成转录和润色，然后显示一个小药丸，提供撤销按钮三秒钟，只要您的指针放在上面，就可以保持可见。 如果您让它淡出，文本会在您的历史记录中等待24小时，其中“保留”按钮使其永久化。 仅保留文本记录，不保留音频。 默认情况下，转义恢复被禁用。 您可以在“Keybinds”设置菜单中启用它。"
+            "value" : "按下取消快捷键，用于立即丢弃您的录音。 打开“逃生恢复”，您的语音输入将被保留。 该应用程序完成转录和润色，然后显示一个小浮动条，提供撤销按钮三秒钟，只要您的指针放在上面，就可以保持可见。 如果您让它淡出，文本会在您的历史记录中等待24小时，其中“保留”按钮使其永久化。 仅保留文本记录，不保留音频。 默认情况下，转义恢复被禁用。 您可以在“Keybinds”设置菜单中启用它。"
           }
         }
       }
@@ -39265,7 +39265,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "这就是你一直在要求的。 录音药丸现在在你说话时显示你的话。 盒子一开始很紧凑，长到五行，然后滚动，这样你说的最新东西总是在视野中，药丸已经重建在它周围，有一个活的仪表、一个更干净的标题和你可以看到它的免提计时器。 选择适合您的Mac的引擎：苹果的引擎内置在macOS 26中，不需要预览模型，尽管有些语言首先要求macOS提供语言包，或者采用通用语言包，即在macOS 14及更高版本上运行的217 MB下载，涵盖更多语言。 您可以在实时预览页面上选择您的语言，并且您可以随时打开或关闭整个事情。 你完成的文本和以前一样好：当你停下来时，Parakeet或WhisperKit会从第一个单词开始转录整个录音，然后你的自定义单词和润色在顶部运行。 因此，在你停止说话之前，没有必要让预览赶上。 你所说的一切都已经被捕捉到了。"
+            "value" : "这就是你一直在要求的。 录音浮动条现在在你说话时显示你的话。 盒子一开始很紧凑，长到五行，然后滚动，这样你说的最新东西总是在视野中，浮动条已经重建在它周围，有一个活的仪表、一个更干净的标题和你可以看到它的免提计时器。 选择适合您的Mac的引擎：苹果的引擎内置在macOS 26中，不需要预览模型，尽管有些语言首先要求macOS提供语言包，或者采用通用语言包，即在macOS 14及更高版本上运行的217 MB下载，涵盖更多语言。 您可以在实时预览页面上选择您的语言，并且您可以随时打开或关闭整个事情。 你完成的文本和以前一样好：当你停下来时，Parakeet或WhisperKit会从第一个单词开始转录整个录音，然后你的自定义单词和润色在顶部运行。 因此，在你停止说话之前，没有必要让预览赶上。 你所说的一切都已经被捕捉到了。"
           }
         }
       }
@@ -39601,7 +39601,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "一些较小的改进。 快捷方式页面现在被称为快捷键，过去说“热键”的地方现在都说“快捷键”，所以一件事有一个名字。 实时转录现在被称为更快的转录，因为文字落地时的更改是它的实际作用。 噪点的房间不再吃你句子的开头，尽管如果你使用自动停止，它的时间会在这些房间里移动：通常更早停止，在半秒设置下，有时会等待更长时间或根本不会自行停止。 粘贴速度大约是四倍，在大多数应用程序中，从大约265毫秒下降到不到60毫秒，因为您的语音输入在计算完成之前不再等待剪贴板交接。 在终端中口述不再在会话中悄悄放弃，唯一的治疗方法过去是退出并重新打开应用程序。 录音不再像什么都没听到一样被缩短，这种情况可能发生在在你真正开始之前，一个安静的开场耗尽了应用程序的耐心。 拖著一颗药丸不再留下它的幽灵副本滞留在萤幕上。 更改您的语音输入快捷键不再可以意外设置录音。 单个修饰键现在可以作为您的取消快捷键，以前它会保存和显示，然后安静地什么都不做。 如果您直接从下载文件夹运行EnviousWispr，它将其移动到应用程序中的提议现在实际上有效。"
+            "value" : "一些较小的改进。 快捷方式页面现在被称为快捷键，过去说“热键”的地方现在都说“快捷键”，所以一件事有一个名字。 实时转录现在被称为加速识别，因为文字落地时的更改是它的实际作用。 噪点的房间不再吃你句子的开头，尽管如果你使用自动停止，它的时间会在这些房间里移动：通常更早停止，在半秒设置下，有时会等待更长时间或根本不会自行停止。 粘贴速度大约是四倍，在大多数应用程序中，从大约265毫秒下降到不到60毫秒，因为您的语音输入在计算完成之前不再等待剪贴板交接。 在终端中口述不再在会话中悄悄放弃，唯一的治疗方法过去是退出并重新打开应用程序。 录音不再像什么都没听到一样被缩短，这种情况可能发生在在你真正开始之前，一个安静的开场耗尽了应用程序的耐心。 拖著一颗浮动条不再留下它的幽灵副本滞留在萤幕上。 更改您的语音输入快捷键不再可以意外设置录音。 单个修饰键现在可以作为您的取消快捷键，以前它会保存和显示，然后安静地什么都不做。 如果您直接从下载文件夹运行EnviousWispr，它将其移动到应用程序中的提议现在实际上有效。"
           }
         }
       }
@@ -40849,7 +40849,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "录音开始和停止时的可选钟声。 十二种可供选择，从柔和到响亮。 默认关闭。"
+            "value" : "录音开始和停止时的可选提示音。 十二种可供选择，从柔和到响亮。 默认关闭。"
           }
         }
       }
@@ -40873,7 +40873,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "选择您的录音药片位置"
+            "value" : "选择您的录音浮动条位置"
           }
         }
       }
@@ -40897,7 +40897,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "将录音药片移动到屏幕的顶部或底部，它就会记住。"
+            "value" : "将录音浮动条移动到屏幕的顶部或底部，它就会记住。"
           }
         }
       }

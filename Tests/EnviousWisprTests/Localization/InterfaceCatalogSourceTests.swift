@@ -167,6 +167,10 @@ struct InterfaceCatalogSourceTests {
       "Dictation Settings": "语音输入设置",
       "Live Preview": "实时预览",
       "History": "历史记录",
+      "Record": "录音",
+      "Clipboard": "剪贴板",
+      "Recording Pill": "录音浮动条",
+      "Dictations": "语音输入记录",
       "settings.aiPolish.enable.title": "启用 AI 润色",
       "keyName.rightOption": "右侧 ⌥",
     ]
