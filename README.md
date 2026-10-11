@@ -4,6 +4,8 @@
 
 <h1 align="center">EnviousWispr</h1>
 
+<p align="center"><a href="README.zh-CN.md">简体中文分支说明与安装</a></p>
+
 <p align="center">
   <strong>Talk naturally. Paste perfectly.</strong><br/>
   Free, on-device AI dictation and speech-to-text for macOS.<br/>

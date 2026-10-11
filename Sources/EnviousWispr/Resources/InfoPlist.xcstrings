@@ -16,6 +16,12 @@
             "state" : "translated",
             "value" : "EnviousWispr verwendet AppleScript, um deinen diktierten Text in die aktive App einzufügen, wenn das direkte Einfügen nicht möglich ist, und um Musik oder Spotify während des Diktierens anzuhalten, wenn du diese Einstellung wählst."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法直接插入时，EnviousWispr 会使用 AppleScript 将语音输入的文字粘贴到当前应用；如果启用了相应设置，还会在录音时暂停 Music 或 Spotify。"
+          }
         }
       }
     },
@@ -33,6 +39,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "EnviousWispr liest die Namen deiner Kontakte, damit die Namen von Menschen, die du kennst, beim Diktieren richtig geschrieben werden. Dein Adressbuch wird nie hochgeladen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "EnviousWispr 读取通讯录中的姓名，帮助正确识别和书写人名。你的通讯录不会上传。"
           }
         }
       }
@@ -52,6 +64,12 @@
             "state" : "translated",
             "value" : "Copyright © 2025–2026 Envious Labs LLC. Alle Rechte vorbehalten."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版权所有 © 2025–2026 Envious Labs LLC。保留所有权利。"
+          }
         }
       }
     },
@@ -70,6 +88,12 @@
             "state" : "translated",
             "value" : "EnviousWispr benötigt Zugriff auf dein Mikrofon, um deine Sprache in Text umzuwandeln."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "EnviousWispr 需要访问麦克风，将你的语音转换成文字。"
+          }
         }
       }
     },
@@ -87,6 +111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "EnviousWispr verwendet die Spracherkennung auf dem Gerät, um deine Worte beim Sprechen in der Aufnahmeanzeige anzuzeigen. Diese Vorschau bleibt auf deinem Mac und ist nie der Text, der eingefügt wird."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "EnviousWispr 使用本机语音识别，在录音浮动条中实时预览文字。预览内容始终留在你的 Mac 上，最终粘贴的文字由主识别引擎生成。"
           }
         }
       }

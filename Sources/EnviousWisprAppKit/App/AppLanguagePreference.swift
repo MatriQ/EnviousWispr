@@ -41,9 +41,16 @@ struct AppLanguagePreference {
     let list = defaults.persistentDomain(forName: domain)?[Self.key] as? [String]
     guard let first = list?.first else { return nil }
     if languages.contains(first) { return first }
-    // System Settings can store a regional code ("de-DE"); macOS then shows the shipped "de".
-    let base = Locale(identifier: first).language.languageCode?.identifier
-    return base.flatMap { languages.contains($0) ? $0 : nil }
+    // Chinese locales must retain their script: zh-CN and zh-SG resolve to zh-Hans,
+    // while zh-TW resolves to zh-Hant when that translation is shipped. Falling back
+    // to just "zh" loses the distinction and makes a valid override look unshipped.
+    let language = Locale.Language(identifier: first)
+    guard let base = language.languageCode?.identifier else { return nil }
+    if let script = language.script?.identifier {
+      let scriptCode = "\(base)-\(script)"
+      if languages.contains(scriptCode) { return scriptCode }
+    }
+    return languages.contains(base) ? base : nil
   }
 
   /// Sets the app's language; nil ("System default") removes the override. A language the bundle
@@ -86,7 +93,7 @@ struct AppLanguagePreference {
 
   /// A language named in its own language ("Deutsch", "English"), never translated.
   static func name(of code: String) -> String {
-    Locale(identifier: code).localizedString(forLanguageCode: code)?.localizedCapitalized ?? code
+    Locale(identifier: code).localizedString(forIdentifier: code)?.localizedCapitalized ?? code
   }
 }
 

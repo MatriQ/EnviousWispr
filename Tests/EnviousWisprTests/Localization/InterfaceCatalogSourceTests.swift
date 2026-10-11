@@ -4,8 +4,8 @@ import Testing
 /// #3142: the interface String Catalog, as committed and as compiled into the app
 /// the same build produces beside this test bundle.
 ///
-/// #3142 Phase 5: English and German ship. A `de` value in a catalog makes the main bundle
-/// declare German, so German must stay on every key (completeness itself, per unit, is
+/// English, German and Simplified Chinese ship. Catalog values make the main bundle
+/// declare those languages, so each language must stay on every key (completeness per unit is
 /// `l10n-catalog-sync.sh --check`); these tests keep that check from going vacuous.
 @Suite("Interface catalog source", .tags(.driftGuard))
 struct InterfaceCatalogSourceTests {
@@ -78,21 +78,26 @@ struct InterfaceCatalogSourceTests {
   }
 
   @Test(
-    "English and German only, and German on every key",
+    "English, German and Simplified Chinese ship on every key",
     arguments: [catalogPath] + infoPlistCatalogs)
-  func englishAndGermanShip(catalog: String) throws {
+  func supportedInterfaceLanguagesShip(catalog: String) throws {
     let strings = try Self.strings(catalog)
     #expect(!strings.isEmpty, "catalog parsed to zero entries")
     var languages = Set<String>()
     var withoutGerman: [String] = []
+    var withoutChinese: [String] = []
     for (key, value) in strings {
       let localizations = (value as? [String: Any])?["localizations"] as? [String: Any] ?? [:]
       languages.formUnion(localizations.keys)
       // `Text("")` extracts an empty key with nothing to translate.
       if !key.isEmpty, localizations["de"] == nil { withoutGerman.append(key) }
+      if !key.isEmpty, localizations["zh-Hans"] == nil { withoutChinese.append(key) }
     }
-    #expect(languages.isSubset(of: ["en", "de"]), "languages present: \(languages.sorted())")
+    #expect(
+      languages.isSubset(of: ["en", "de", "zh-Hans"]), "languages present: \(languages.sorted())")
     #expect(languages.contains("de"), "German is gone from \(catalog)")
+    #expect(languages.contains("zh-Hans"), "Simplified Chinese is gone from \(catalog)")
+    #expect(withoutChinese.isEmpty, "keys without Chinese: \(withoutChinese.sorted().prefix(10))")
     #expect(withoutGerman.isEmpty, "keys without German: \(withoutGerman.sorted().prefix(10))")
   }
 
@@ -150,6 +155,25 @@ struct InterfaceCatalogSourceTests {
     for (key, german) in Self.expectedGerman {
       #expect(compiled[key] == german, "\(key) in the shipped German table")
     }
+  }
+
+  @Test("The built app ships Simplified Chinese controls and permission descriptions")
+  func builtAppShipsCompiledChineseTables() throws {
+    let app = try Self.builtApp()
+    let compiled = try Self.compiledTable(in: app, language: "zh-Hans", table: "Localizable")
+    let expected = [
+      "AI Polish": "AI 润色",
+      "All Languages": "所有语言",
+      "Dictation Settings": "语音输入设置",
+      "Live Preview": "实时预览",
+      "History": "历史记录",
+      "settings.aiPolish.enable.title": "启用 AI 润色",
+      "keyName.rightOption": "右侧 ⌥",
+    ]
+    for (key, value) in expected { #expect(compiled[key] == value, "\(key)") }
+    let permissions = try Self.compiledTable(in: app, language: "zh-Hans", table: "InfoPlist")
+    #expect(permissions["NSMicrophoneUsageDescription"] == "EnviousWispr 需要访问麦克风，将你的语音转换成文字。")
+    #expect(permissions["NSSpeechRecognitionUsageDescription"]?.contains("本机语音识别") == true)
   }
 
   @Test("The built app ships the compiled English table with every translated entry")

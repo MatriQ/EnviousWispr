@@ -106,6 +106,41 @@ struct AppLanguagePreferenceTests {
     #expect(preference.languageAtNextLaunch(systemPreferences: ["en-US"]) == "de")
   }
 
+  @Test(
+    "Simplified Chinese regional overrides survive launch cleanup",
+    arguments: ["zh", "zh-CN", "zh_SG", "zh-Hans", "zh-Hans-CN"])
+  func simplifiedChineseOverride(stored: String) {
+    let (preference, defaults, suite) = Self.preference(shipped: ["Base", "en", "de", "zh-Hans"])
+    defer { UserDefaults.standard.removePersistentDomain(forName: suite) }
+    defaults.set([stored], forKey: "AppleLanguages")
+    #expect(preference.choice == "zh-Hans")
+    preference.forgetUnshippedOverride()
+    #expect(defaults.persistentDomain(forName: suite)?["AppleLanguages"] as? [String] == [stored])
+    #expect(preference.languageAtNextLaunch(systemPreferences: ["en-US"]) == "zh-Hans")
+  }
+
+  @Test("Chinese script variants remain distinct when both are shipped")
+  func chineseScriptsRemainDistinct() {
+    let (preference, defaults, suite) = Self.preference(shipped: ["en", "zh-Hans", "zh-Hant"])
+    defer { UserDefaults.standard.removePersistentDomain(forName: suite) }
+    defaults.set(["zh-TW"], forKey: "AppleLanguages")
+    #expect(preference.choice == "zh-Hant")
+    defaults.set(["zh-CN"], forKey: "AppleLanguages")
+    #expect(preference.choice == "zh-Hans")
+  }
+
+  @Test("Simplified Chinese can be chosen and follows Chinese system preferences")
+  func choosingSimplifiedChinese() {
+    let (preference, defaults, suite) = Self.preference(shipped: ["Base", "de", "en", "zh-Hans"])
+    defer { UserDefaults.standard.removePersistentDomain(forName: suite) }
+    #expect(preference.languages == ["en", "de", "zh-Hans"])
+    #expect(preference.languageAtNextLaunch(systemPreferences: ["zh-CN", "en-US"]) == "zh-Hans")
+    preference.choose("zh-Hans")
+    #expect(
+      defaults.persistentDomain(forName: suite)?["AppleLanguages"] as? [String] == ["zh-Hans"])
+    #expect(AppLanguagePreference.name(of: "zh-Hans") == "简体中文")
+  }
+
   @Test("Each language is named in its own language")
   func languagesAreNamedInTheirOwnLanguage() {
     #expect(AppLanguagePreference.name(of: "de") == "Deutsch")

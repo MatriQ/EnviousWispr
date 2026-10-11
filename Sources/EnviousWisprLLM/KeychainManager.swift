@@ -329,6 +329,17 @@ struct SecurityKeychainItemStore: KeychainItemStorage {
   private static let logger = Logger(
     subsystem: "com.enviouswispr.app", category: "Keychain")
 
+  // An ad-hoc local build has no Developer ID team or provisioning profile for
+  // the production Data Protection access group. Keep its keys in the encrypted
+  // macOS login keychain, in a separate service, instead of plaintext files.
+  private let useDataProtectionKeychain: Bool
+
+  init(useDataProtectionKeychain: Bool? = nil) {
+    self.useDataProtectionKeychain =
+      useDataProtectionKeychain
+      ?? !(Bundle.main.object(forInfoDictionaryKey: "EnviousWisprLocalBuild") as? Bool ?? false)
+  }
+
   func store(service: String, account: String, value: String) throws {
     guard let data = value.data(using: .utf8) else {
       throw KeyStoreError.storeFailed(-1)
@@ -343,7 +354,9 @@ struct SecurityKeychainItemStore: KeychainItemStorage {
     case errSecItemNotFound:
       var addQuery = query
       addQuery[kSecValueData as String] = data
-      addQuery[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
+      if useDataProtectionKeychain {
+        addQuery[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
+      }
       let addStatus = SecItemAdd(addQuery as CFDictionary, nil)
       guard addStatus == errSecSuccess else {
         throw KeyStoreError.storeFailed(addStatus)
@@ -376,6 +389,7 @@ struct SecurityKeychainItemStore: KeychainItemStorage {
     guard status == errSecSuccess || status == errSecItemNotFound else {
       throw KeyStoreError.deleteFailed(status)
     }
+    guard useDataProtectionKeychain else { return }
     // Issue #845: best-effort cleanup of any v2.0.2 / v2.0.3 orphan that
     // lives in the legacy file-based macOS keychain. The query omits
     // kSecUseDataProtectionKeychain so it targets the legacy backend. We
@@ -398,13 +412,16 @@ struct SecurityKeychainItemStore: KeychainItemStorage {
   }
 
   private func baseQuery(service: String, account: String) -> [String: Any] {
-    [
+    var query: [String: Any] = [
       kSecClass as String: kSecClassGenericPassword,
-      kSecAttrService as String: service,
+      kSecAttrService as String: useDataProtectionKeychain ? service : service + ".local",
       kSecAttrAccount as String: account,
-      kSecAttrSynchronizable as String: kCFBooleanFalse as Any,
-      kSecUseDataProtectionKeychain as String: kCFBooleanTrue as Any,
     ]
+    if useDataProtectionKeychain {
+      query[kSecAttrSynchronizable as String] = kCFBooleanFalse
+      query[kSecUseDataProtectionKeychain as String] = kCFBooleanTrue
+    }
+    return query
   }
 }
 
